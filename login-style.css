@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+:root {
+    --spotify-green: rgb(71, 184, 80);
+    --facebook-blue: rgb(62, 90, 155);
+    --border-grey: rgb(235, 235, 235);
+}
+
+
+body {
+    font-family: 'Didact Gothic', sans-serif;
+    background-color: white;
+}
+ 
+/* -------------< LOGO >------------- */
+.logo-container img.logo {
+   max-width: 10rem;
+}
+
+hr {
+    border: .5px solid var(--border-grey);
+}
+
+/* -------------< SOCIAL LOG-IN >------------- */
+/* .social-buttons, 
+.break-container,
+.login-form,
+.account {
+    max-width: 60%;
+} */
+.social-buttons p {
+    font-size: .8rem;
+    font-weight: bolder;
+}
+
+.social-buttons button.btn--facebook,
+.social-buttons button.btn--apple {
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* .social-buttons button.btn--facebook:hover,    animation???
+.social-buttons button.btn--apple:hover {
+    
+} */
+
+.social-buttons button.btn--facebook a,
+.social-buttons button.btn--apple a,
+.checkbox-container button.btn--spotify a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.social-buttons button.btn--facebook {
+    background-color: var(--facebook-blue);
+}
+
+.social-buttons button.btn--apple {
+    background-color: black;
+}
+
+/* -------------< OR >------------- */
+.break-container .left-line,
+.break-container .right-line {
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+}
+
+/* -------------< LOG-IN FORM >------------- */
+.login-form .email-input,               
+.login-form .password-input {
+    width: 200px;
+}
+
+.checkbox-container button.btn--spotify {
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+    color: white;
+    padding: .5rem 3rem;  
+}
+
+.checkbox-container button.btn--spotify {
+    background-color: var(--spotify-green);
+}
+
+.login-form p {
+    font-size: .8rem;
+}
+
+.green-text {
+    color: var(--spotify-green);
+    font-weight: bold;
+}
+
+/* -------------< CREATE ACCOUNT >------------- */
+.account p {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+
+.account .btn--sign-up {
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: transparent;
+    border-color: rgb(44, 44, 44);
+}
+
+.account .btn--sign-up a {
+    color: black;
+    text-decoration: none;
+}
+
+footer.privacy-settings {
+    max-width: 400px;
+    text-align: center;
+    font-size: .6rem;
+}
+
+footer.privacy-settings a:hover {
+    text-decoration: none;
+    color: var(--spotify-green);
+}
+
+
+@media (min-width: 300px) {
+    .social-buttons, 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account, 
+    .account button.btn--sign-up {
+      width: 100%;
+    }
+}
+
+@media (min-width: 400px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up {
+      width: 65%;
+    }
+}
+
+@media (min-width: 699px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up {
+      width: 50%;
+    }
+}
+
+
+@media (min-width: 909px) { 
+    .social-buttons button.btn--facebook,
+    .social-buttons button.btn--apple,
+    .account button.btn--sign-up,
+    .break-container {
+      width: 35%;
+    }
+}
+
+
+
+
+

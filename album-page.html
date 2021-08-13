@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="album-style.css">
+    
+    <title>Buildweek - Spotify</title>
+  </head>
+
+  <body>
+    <body>
+      <div class="container-fluid px-0">
+        <!-- ALT NAVBAR -->
+        <div class="alt-navbar">
+          <nav class="navbar navbar-expand-lg navbar-dark navbar-alt-color">
+            <div class="spotify-logo">
+              <img src="assets/spotify-logo.png" alt="spotify logo">
+             </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="homepage.html"><i class="bi bi-house-door"></i> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-search"></i> Search</a></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="bi bi-bookmarks"></i> Your Library</a></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><img src="assets/plus.jpg" alt=""> Create Playlist</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="album-page.html"><img src="assets/heart.jpg"  style="width: 32px" alt=""> Liked Songs</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="bi bi-music-note-beamed"></i> Your Favorite Playlist 
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="artistpage.html">This is Queen</a>
+                    <a class="dropdown-item" href="#">Metal Ballads</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Jazz Classic Blue Note Edition</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" tabindex="-1" aria-disabled="false">
+                    <i class="bi bi-cloud-arrow-down"></i> Install App</a>
+                </li>
+              </ul>
+              <!-- Avatar -->
+              <div class="avatar">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle round-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/diego.jpg" class="avatar-img" alt="avatar"> Diego 'Ziba' Banovaz
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Your Profile</a>
+                    <a class="dropdown-item" href="login.html">Log Out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <!-- / ALT NAVBAR -->
+      </div>
+
+
+      <div class="container-fluid px-0"> <!--tutto il body -->
+        
+        <div class="row no-gutters">
+          <!-- |----------------- Sidebar -----------------| -->
+          <div class="col-0 col-lg-2">
+            <div class="sidebar">
+             <div class="spotify-logo">
+               <img src="assets/spotify-logo.png" alt="spotify logo">
+              </div> <!--Da sistemare grandezza-->
+  
+              <div class="icons-menu">
+                <ul class="p-1">
+                  <li><a href="homepage.html"><i class="bi bi-house-door"></i> Home</a></li>
+                  <li><a href="#"><i class="bi bi-search"></i> Search</a></li>
+                  <li><a href="#"><i class="bi bi-bookmarks"></i> Your Library</a></li>
+                </ul>
+              </div> <!--/ menu con icone-->
+  
+              <div class="playlist-menu">
+                <ul class="p-1">
+                  <li><a href="#"><img src="assets/plus.jpg" alt=""> Create Playlist</a></li> <!--dimensioni immagini !!!!!!!!-->
+                  <li><a href="album-page.html"><img src="assets/heart.jpg"  style="width: 32px" alt=""> Liked Songs</a></li>
+                </ul> 
+              </div>
+  
+              <div class="genres-menu mt-2">
+                <ul class="p-1">
+                  <li><a href="#">The game</a></li>
+                  <li><a href="artistpage.html">This Is Queen</a></li>
+                  <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                  <li><a href="#">The Lord Of The Rings Soundtrack</a></li>
+                  <li><a href="#">Vaporwave</a></li>
+                  <li><a href="#">Lo Fi | Hip-Hop / Chillhop</a></li>
+                  <li><a href="#">Skyrim Soundtrack</a></li>
+                  <li><a href="#">Assassin's Creed Sea Shanties</a></li>
+                  <li><a href="#">This is Pantera</a></li>
+                  <li><a href="#">Oceania - Soundtrack</a></li>
+                  <li><a href="#">Disney Songs</a></li>
+                  <li><a href="#">No Thoughts Just Vibes</a></li>
+                  <li><a href="#">This Is Phoebe Bridgers</a></li>
+                  <li><a href="#">This is Herman Medrano</a></li>
+                  <li><a href="#">Sad Songs</a></li>
+                  <li><a href="#">Big On The Internet</a></li>
+                  <li><a href="#">90s Rock Anthem</a></li>
+                  <li><a href="#">This Is Amaranthe</a></li>
+                  <li><a href="#">Mix anni '90</a></li>
+                  <li><a href="#">Funky Heavy Bluesy</a></li>
+                  <li><a href="#">Jazz Classic Blue Note Edition</a></li>
+                  <li><a href="#">Party</a></li>
+                  <li><a href="#">Focus</a></li>
+                  <li><a href="#">R&B</a></li>
+                  <li><a href="#">Soul</a></li>
+                  <li><a href="#">Funk</a></li>
+                  <li><a href="#">Flamenco</a></li>
+                  <li><a href="#">League Of Legends</a></li>
+                  <li><a href="#">Doom Metal</a></li>
+                  <li><a href="#">Glam Metal</a></li>
+                  <li><a href="#">Heavy Metal</a></li>
+                  <li><a href="#">Trash Metal</a></li>
+                  <li><a href="#">This Is Children Of Bodom</a></li>
+                  <li><a href="#">This Is Sham 69</a></li>
+                  <li><a href="#">Metal Ballads</a></li>
+                </ul>
+              </div>
+  
+              <div class="install-app p-1">  <!-- ✿✿✿✿✿✿ added mb-xl-2 -->
+                <i class="bi bi-cloud-arrow-down"></i>
+                <span>Install app</span>
+              </div>
+  
+            </div> <!--sidebar-->
+            
+          </div> <!--col sidebar-->
+          <!-- |----------------- Sidebar end -----------------| -->
+
+  
+          <!-- |----------------- Right column (main content) -----------------| -->
+          <div class="col col-lg-10">
+            <div class="container-fluid container--main px-0">
+  
+              <!-- |----------------- Nav-Avatar -----------------| -->
+              <!--arrows and avatar-->
+            <div class="nav-avatar container py-2 py-lg-3 px-3">
+              <!--freccette-->
+              <div class="arrows text-white">
+                <i class="bi bi-arrow-left-circle-fill"></i>
+                <i class="bi bi-arrow-right-circle-fill"></i>
+              </div>  
+
+               <!--avatar/ log-in-->
+               <div class="avatar">
+                <div class="dropdown">
+                  <a class="btn btn-secondary dropdown-toggle round-btn" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="assets/diego.jpg" class="avatar-img" alt="avatar"> Diego 'Ziba' Banovaz
+                  </a>
+                
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <a class="dropdown-item" href="#">Your Profile</a>
+                    <a class="dropdown-item" href="login.html">Log Out</a>
+                  </div>
+                </div>
+              </div>
+
+            </div> <!--container flex-->
+              <!-- |----------------- Navbar (avatar) end -----------------| -->
+              
+
+              <!-- WORKSPACE START -->
+              <!-- |----------------- Album overview -----------------| -->
+              <div class="album-overview container mt-2 mb-3">
+                
+                  <div class="album-cover-info d-flex justify-content-start align-items-center">
+                    <div class="album-cover">
+                      <img src="assets/Pallbearer.jpg" alt="acdc">
+                    </div>
+
+                    <div class="album-title d-flex flex-column justify-content-end align-items-start pl-3">
+                      <p class="album mb-0">HEARTLESS</p>
+                      <h2>Pallbearer</h2>
+                      <div class="album-infos-wrapper d-flex justify-content-start align-items-center">
+                        <div class="artist-img">
+                          <img src="assets/diego.jpg" alt="">
+                        </div>
+                        <div class="list pl-2">
+                            <span>Pallbearer</span>
+                            <span>2020</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>              
+              </div>
+              <!-- |----------------- Album overview end -----------------| -->
+
+            
+              <!-- |----------------- Play button and icons -----------------| -->
+              <!-- <div class="container-fluid black-layer px-0"></div> -->
+              <div class="album--container black-layer container-fluid px-2 px-0">
+                  <div class="icons--container container-fluid px-0 pt-3 pt-md-4 pb-1 pb-md-2">
+                    <div class="d-flex justify-content-start align-items-center px-0 px-md-3"> <!-- ★★★ -->
+                        <div class="green-play--btn"></div>
+                        <div class="icons-wrapper mx-2">
+                          <i class="bi bi-heart px-2"></i>
+                          <i class="bi bi-three-dots"></i>
+                        </div>
+                      </div>
+                 </div>
+                        <!-- |----------------- Play button and icons end -----------------| -->
+    
+    
+                        <!-- |----------------- Title section -----------------| -->
+                <div class="title-th d-flex justify-content-between px-0 mx-1 mx-md-3 py-2">
+                  <span class="title"># TITLE</span>
+                  <span><i class="bi bi-clock"></i></span>
+                </div>
+            
+                          <!-- |----------------- Title section end -----------------| -->
+
+  
+                            <!-- |----------------- Album songs -----------------| -->
+                <div class="tracklist container-fluid px-0 px-md-3">
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ --> <!--d-flex justify-content-between align-items-center-->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>1</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">I Saw the End</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>6:21</span>
+                    </div>
+
+                  </div> <!--single track container-->
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>2</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Thorns</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>5:24</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>3</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Lie of Survival</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>8:25</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>4</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Dancing in Madness</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>11:47</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>5</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Cruel Road</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>8:09</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>6</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Heartless</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>8:09</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>7</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">A Plea for Understanding</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>12:40</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>8</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Fear & Fury</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>5:52</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>9</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Over & Over</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>6:08</span>
+                    </div>
+
+                  </div>
+
+                  <!--Container row grande con titolo e durata-->
+                  <div class="track--container d-flex justify-content-between align-items-center my-2"> <!-- ★★★ -->
+
+                    <div class="track-num-title">
+                      <div class="row align-items-center pt-1">
+                        <div class="col-1 track-number"> <!--numero-->
+                          <span>10</span>
+                        </div>
+                        <div class="col track-info px-0"> <!--titolo e artista-->
+                          <h6 class="track-title mb-0">Love You to Death</h6>
+                          <p class="track-artist mb-0">Pallbearer</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="track-length">
+                      <span>7:23</span>
+                    </div>
+
+                  </div>
+                </div> <!--all tracks container-->
+                            <!-- |----------------- Album songs end -----------------| -->
+              </div>
+
+              
+              <!-- WORKSPACE END -->
+            
+            </div> <!--main container -->
+          </div> <!--/ col main-->
+        </div> <!--/ row no-gutters -->
+      </div> <!--/ container-fluid-->
+      
+  
+       <!--Container now playing-->
+    <div class="container--nowplay px-0 px-md-1 py-1"> <!--✿✿✿✿✿✿-->
+
+      <div class="album-song-icons d-flex justify-content-start align-items-center"> <!-- ✿✿✿✿✿✿ between => start-->
+        <div class="album-img">
+          <img src="assets/JD-Closer.jpg" alt="Joy Division">
+        </div>
+  
+        <div class="song-info">
+          <h6 class="pl-2 mb-0">Isolation - Joy Division</h6>
+          <p class="pl-2 mb-0">Closer</p>
+        </div>
+  
+        <div class="song-icons">
+          <i id="heart" class="bi bi-heart px-2 px-sm-1"></i>  <!-- ✿✿✿✿✿✿ -->
+          <i class="bi bi-laptop"></i>
+        </div>
+
+      </div>
+
+      <div class="controllers-progress d-flex flex-column justify-content-evenly align-items-center"> <!-- ✿✿✿✿✿✿ rimesso flex -->
+        <!--controllers-->
+        <div class="controllers-icons d-flex justify-content-center align-items-center"> <!-- ✿✿✿✿✿✿ -->
+          <div class="left-side pr-2">
+            <i class="bi bi-shuffle"></i>
+            <i class="bi bi-skip-start-fill"></i>
+          </div>
+
+          <audio id="player" src="assets/audio-sample.mp3"></audio> <!-- ✿✿✿✿✿✿ -->
+          <button onclick="playAudio(event)" id="play-me" class="play-btn"></button>
+          
+          <div class="right-side pl-2">
+            <i class="bi bi-skip-end-fill"></i>
+            <i class="bi bi-arrow-clockwise"></i>
+          </div>
+        </div>
+        
+        
+        <div class="progress-bar-container"> <!-- ✿✿✿✿✿✿ aggiunto container -->
+          <span class="right-min pr-1">0:00</span>
+          <div class="progress my-2"> <!-- ✿✿✿✿✿✿ mt 2 => my-2 -->
+            <div id="seekbar" class="progress-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <span class="left-min pl-1">5:00</span>
+        </div>
+        
+      </div> <!-- /controllers-progress-->
+
+        <!-- ✿✿✿✿✿✿ "icons-volume" => "volume section -->
+      <div class="volume-section pr-1"> <!-- ✿✿✿✿✿✿ aggiunto pr-1 -->
+        <div class="volume-icons px-2"> <!-- ✿✿✿✿✿✿ pr 2 => px-2 -->
+          <i class="bi bi-text-indent-left"></i>
+          <i class="bi bi-speaker-fill"></i>
+          <i class="bi bi-volume-up"></i>
+        </div>
+  
+        
+        <div class="volume-bar">
+          <div class="progress"> <!-- ✿✿✿✿✿✿ tolto mt 2 -->
+            <div id="seekbar" class="progress-bar volume-bar" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+    <script>
+     
+     let audioToPlay = document.getElementById('player')
+     
+     let playAudio = function() {
+       let playButton = document.getElementById('play-me')
+       playButton.classList.toggle('playing')
+       
+       if (playButton.classList.contains('playing') === true) {
+         audioToPlay.play()
+       } else {
+         audioToPlay.pause()
+       }
+      }
+      // audioToPlay.ontimeupdate()
+
+      let heart = document.getElementById('heart')
+      
+      heart.addEventListener('click', function() {
+        heart.classList.toggle('green')
+      })
+  
+    </script>
+
+
+  </body>
+</html>

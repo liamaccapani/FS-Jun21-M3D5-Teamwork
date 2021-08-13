@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+:root {
+    --grey-text: rgb(160, 160, 160);
+    --bg-hover: rgba(128, 128, 128, 0.604);
+    --bg-body: rgb(18, 18, 18);
+    --bg-nowplay: rgb(24, 24, 24);
+    --spotify-green: rgb(29, 185, 84);
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Didact Gothic', sans-serif;
+    background: linear-gradient(0deg, var(--bg-body) 0%, rgba(0,0,0,1) 70%, rgb(201, 184, 180) 100%);
+}
+
+/* -------> ALT NAVBAR <--------- */
+
+.alt-navbar .navbar-alt-color {
+    background-color: black;
+}
+
+.alt-navbar ul li {
+    list-style: none;
+    font-size: 1rem;
+}
+
+.alt-navbar ul li:hover {
+    background-color: var(--bg-hover);  
+}
+
+.alt-navbar ul li a:hover {
+    color: white;
+}
+
+/* -------> SIDEBAR <--------- */
+
+.sidebar {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start; */          
+    contain: content;
+    font-size: 0.9rem;
+    background-color: black;
+    padding-left: 1rem;
+}
+
+.sidebar .spotify-logo {
+    object-fit: cover;
+    /* align-self: center; */
+}
+
+.sidebar ul li {
+    list-style: none;
+    font-size: 0.8rem;
+}
+
+.sidebar ul li:hover {
+    background-color: var(--bg-hover);  
+}
+
+.sidebar .icons-menu i {
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+.sidebar .icons-menu li,
+.sidebar .playlist-menu li {
+    font-weight: bolder;
+}
+
+.sidebar ul li a {
+    color: var(--grey-text);
+    text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+    color: white;
+}
+
+
+.sidebar div.playlist-menu {
+    border-bottom: 1px solid var(--grey-text);
+}
+
+.sidebar div.genres-menu ul {
+    overflow-y: scroll;
+    max-height: 400px;
+    /* height: 100%; */
+}
+
+ .sidebar div.genres-menu ul li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--grey-text);
+    width: 200px;
+ }
+
+.sidebar .install-app {
+    background-color: black;
+    color: var(--grey-text);
+    font-weight: bolder;
+    height: 1.5rem;
+}
+
+.sidebar .install-app:hover {
+    color: white;
+}
+
+@media (max-width: 999px) {
+    .sidebar, 
+    .container--main .nav-avatar {
+      display: none;
+    }
+
+    .alt-navbar {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .sidebar,
+    .nav-avatar {
+        display: block;
+    }
+
+    .alt-navbar {
+        display: none;
+    }
+
+}
+
+@media (max-height: 679px) {
+    .sidebar {
+        height: 500px; /* different from feature sidebar ******* */
+        position: relative;
+    }
+
+    .sidebar .install-app {
+        position: fixed;
+        bottom: 0px;
+        left: 12px;
+        right: 0;
+        height: 30px;
+    }
+}
+
+@media (min-height: 680px) {
+    .sidebar {
+        height: 540px;
+        /* position: relative; */
+    }
+
+    .sidebar .install-app {
+        position: fixed;
+        bottom: 0px;
+        left: 12px;
+        right: 0;
+        height: 30px;
+    }
+}
+
+@media (min-height: 799px) {
+    .sidebar {
+        height: 700px;
+    }
+}
+
+/* -------> NAV-AVATAR <--------- */ /* color and border radius of avatar dd menu, dd menu not working */
+
+div.nav-avatar {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.avatar div.dropdown img.avatar-img {
+    max-width: 25px;
+    border-radius: 50%;
+}
+
+div.avatar div.dropdown .round-btn {
+    border-radius: 50px;
+    height: 38px;
+}
+
+/* -------> ALBUM INFO <--------- */
+
+.album-cover-info .album-cover {
+    width: 25%;
+}
+
+.album-cover-info .album-title {
+    width: 75%;
+}
+
+.album-cover img {
+    width: 100%;
+    box-shadow: 0px 0px 20px -1px black;
+}
+
+
+.album-infos-wrapper img {
+    object-fit: cover;
+    width: 1.2rem;
+    border-radius: 50%;
+}
+
+.album-infos-wrapper .list span {
+    font-size: .8rem;
+}
+
+.album-overview {
+    color: white;
+}
+
+
+/* -------> BLACK LAYER <--------- */
+.black-layer {
+    position: relative;
+    right: 0;
+    left: 0;
+}
+
+.black-layer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(44, 43, 43, 0.768);
+    z-index: -1;
+}
+
+.title-th {
+    color: var(--grey-text);
+    border-bottom: 1px solid var(--grey-text);
+}
+
+.title-th span.title {
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.tracklist {
+    color: var(--grey-text);
+}
+
+.track--container {
+    width: 100%;
+}
+
+.track--container .track-num-title {
+    width: 90%;  
+}
+
+
+@media (max-width: 360px) {
+    .album-cover-info .album-cover {
+        width: 35%;
+    }
+
+    .album-cover-info .album-title {
+        width: 65%;
+    }
+
+    .album-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .album-title p.album,
+    .track-num-title *  {
+        font-size: .8rem;
+    }
+
+    .track--container .track-num-title h6.track-title {
+        font-weight: bold;
+    }
+
+}
+
+@media (min-width: 361px) {
+    .track--container .track-num-title h6.track-title {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 999px) {
+    .album-cover-info .album-cover {
+        width: 15%;
+    }
+
+    .album-cover-info .album-title p {
+        font-size: .8rem;
+    }
+
+    .album-cover-info .album-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .track-num-title span,
+    .track-num-title .track-info p {
+        font-size: .8rem;
+    }
+
+    .track-num-title .track-info h6 {
+        font-size: .9rem;
+    }
+
+}
+
+
+/* -------> ICONS CONTAINER <--------- */
+.icons--container .green-play--btn {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--spotify-green); /* change with spotify green */
+    border-radius: 50%;
+    position: relative;
+}
+
+.icons--container .green-play--btn::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 6px 0 6px 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+}
+
+.icons--container .icons-wrapper {
+    color: var(--grey-text);
+}
+
+/* -------> NOW PLAYING <--------- */
+
+.green {
+    color: var(--spotify-green);
+}
+
+.progress-bar-container .right-min,
+.progress-bar-container .left-min {
+    font-size: .7rem;
+}
+
+/* general layout */
+ div.container--nowplay {
+    width: 100%; /* ✿✿✿✿✿✿ */
+    position: fixed;
+    bottom: 0;
+    color: var(--grey-text);
+    background-color: var(--bg-nowplay);
+}
+
+button.play-btn {
+    background-color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: relative;
+    top: 0px;
+}
+
+button.play-btn:after {
+    content: '';
+    width: 0; /* make the container collapse */
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 10px; 
+    border-color: transparent transparent transparent black; 
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+}
+
+ .container--nowplay .progress {
+    width: 90%;
+    background-color: var(--grey-text);
+    height: 2px;
+}
+
+/* controllare cosa cambia questo */
+.volume-bar .progress {
+    width: 80px;
+    background-color: var(--grey-text);
+}
+
+@media (max-width: 399px) {
+    .album-song-icons {
+        flex-wrap: nowrap;
+    }
+
+    .container--nowplay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .container--nowplay {
+        width: 100%;
+    }
+
+    .container--nowplay .album-song-icons {
+        width: 75%;
+        /* justify-content: flex-start; */
+    }
+
+    .container--nowplay .song-info {
+        width: 50%;
+    }
+
+    .container--nowplay .song-info h6, 
+    .container--nowplay .song-info p {
+        /* display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden; */      /* no need for width */
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 85% /* doesn't work without WIDTH */
+    }
+
+    .album-img {
+        width: 15%;
+    }
+
+    .album-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .song-icons .bi-laptop {
+        display: none;
+    }
+
+    .controllers-icons .right-side,
+    .controllers-icons .left-side,
+    .controllers-progress .progress-bar-container,
+    .volume-section {
+        display: none;
+    }
+
+    .controllers-progress {
+        width: 25%;
+    }
+
+    button.play-btn,
+    button.pause-btn {
+        display: inline;
+    }
+}
+
+@media (min-width: 400px) {
+    .album-song-icons {
+        flex-wrap: nowrap;
+    }
+
+    .container--nowplay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container--nowplay {
+        width: 100%;
+    }
+
+    .container--nowplay .album-song-icons {
+        width: 60%;
+        /* justify-content: flex-start; */
+    }
+
+    .container--nowplay .song-info {
+        width: 55%;
+    }
+
+    .container--nowplay .song-info h6, 
+    .container--nowplay .song-info p {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 85% /* doesn't work without WIDTH */
+    }
+    .album-img {
+        width: 15%;
+    }
+
+    .album-img img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .song-icons .bi-laptop {
+        display: inline;
+    }
+
+    .progress-bar-container,
+    .volume-section {
+        display: none;
+    }
+
+    .controllers-progress {
+        width: 40%;
+    }
+
+    button.play-btn,
+    button.pause-btn {
+        display: inline;
+    }
+}
+
+@media (min-width: 599px) {
+    .album-song-icons {
+        flex-wrap: nowrap;
+    }
+
+    .container--nowplay {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container--nowplay {
+        width: 100%;
+    }
+
+    .container--nowplay .album-song-icons {
+        width: 40%;
+    }
+
+    .album-img {
+        width: 15%;
+    }
+
+    .container--nowplay .song-info {
+        width: 55%;
+    }
+
+    .container--nowplay .song-info h6, 
+    .container--nowplay .song-info p {
+        font-size: 0.9rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 90% /* doesn't work without WIDTH */
+    }
+
+    .controllers-progress {
+        width: 40%;
+    }
+    .progress-bar-container {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+    .controllers-progress {
+        width: 40%;
+    }
+
+    button.play-btn,
+    button.pause-btn {
+        display: inline;
+    }
+
+    .volume-section {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 40%;
+    }
+}
+
+@media (min-width: 1125px) {
+    .album-img {
+        width: 12%;
+    }
+}
+
+
+/* Triangle trick:
+* = border-top 6 border-right 0 border-bottom 6 border-left 10
+* border top and bottom --> makes it higher/shorter
+* no need for border-right because it' pointing in that direction, and messes up with total width
+* (if left pointing arrow--> no need for border-left)
+* border-left = width of the arrow */
