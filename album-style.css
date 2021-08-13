@@ -594,11 +594,3 @@ button.play-btn:after {
         width: 12%;
     }
 }
-
-
-/* Triangle trick:
-* = border-top 6 border-right 0 border-bottom 6 border-left 10
-* border top and bottom --> makes it higher/shorter
-* no need for border-right because it' pointing in that direction, and messes up with total width
-* (if left pointing arrow--> no need for border-left)
-* border-left = width of the arrow */
