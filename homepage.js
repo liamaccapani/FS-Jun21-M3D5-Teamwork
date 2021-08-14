@@ -1,48 +1,68 @@
-let randomAlbums = [];
-
 window.onload = () => {
-  generateRandom();
-  getRandom();
+  generateRandomId();
+  console.log(randomIds);
+  getRandomAlbum();
+  console.log(albumsData);
+  displayHomepage(albumsData);
 };
 
-function generateRandom() {
+// Global Variables
+let randomIds = [];
+let albumsData = [];
+
+// Generating random albums ID and pushing it into randomIds array
+function generateRandomId() {
   for (let i = 0; i < 25; i++) {
     let randomId = Math.floor(100000 + Math.random() * 900000);
-    randomAlbums.push(randomId);
+    randomIds.push(randomId);
   }
 }
 
-function getRandom() {
-  for (let i = 0; i < randomAlbums.length; i++) {
+// Fetching albums data using randomId and pushing data into albumsData array
+function getRandomAlbum() {
+  for (let i = 0; i < randomIds.length; i++) {
     fetch(
-      `https://striveschool-api.herokuapp.com/api/deezer/album/${randomAlbums[i]}`
+      `https://striveschool-api.herokuapp.com/api/deezer/album/${randomIds[i]}`
     )
       .then((response) => response.json())
-      .then((body) => loadAlbum(body));
+      .then((recivedAlbums) => {
+        albumsData.push(recivedAlbums);
+      })
+      .then((data) => displayHomepage(data))
+      .catch((err) => console.log(err));
   }
 }
+
+// Displaying data on Homepage
 const recently_played = document.getElementById("recently_played");
-
-function loadAlbum(body) {
-  if (recently_played !== null) {
-    let playListNode = document.createElement("a");
-    playListNode.href = "album-page.html";
-    playListNode.innerHTML += `   <div class="col album-card px-1">
-              <div class="album-card-content">
-                <img src="${body.cover_big}" alt="">
-                <h5>${body.artist.name}</h5>
-                <p>${body.type}</p>
-              </div>
-            </div>`;
-    recently_played.appendChild(playListNode);
-    playListNode.setAttribute("onclick", loadList(body.id));
-  } else {
-    console.error("null");
+function displayHomepage(data) {
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i]);
+    if (!data[i].error) {
+      let creatElement = document.createElement("a");
+      creatElement.innerHTML += `
+    <div class="col album-card px-1">
+            <div class="album-card-content">
+              <img src="${data[i].cover_big}" alt="">
+              <h5></h5>
+              <p></p>
+            </div>
+          </div>
+    `;
+      recently_played.appendChild(creatElement);
+    } else {
+      console.error("error");
+    }
   }
 }
 
-const recent_album = document.getElementById("recent_album");
-
-function loadList(id) {
-  console.log(id);
-}
+// let playListNode = document.createElement("a");
+// playListNode.href = "album-page.html";
+// playListNode.innerHTML += `   <div class="col album-card px-1">
+//         <div class="album-card-content">
+//           <img src="${data.cover_big}" alt="">
+//           <h5>${data.artist.name}</h5>
+//           <p>${data.type}</p>
+//         </div>
+//       </div>`;
+// recently_played.appendChild(playListNode);
